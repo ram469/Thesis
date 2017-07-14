@@ -1,13 +1,14 @@
 
-\documentclass[a4paper,12pt]{report}
-\begin{document}
-\begin{abstract}
-   {\scriptsize
-	Traditional Hardware are inefficient for performance driven computer vision applictions.Since computer vision algorithms deals with images and in detail the beneath pixels.Some of the algorithms directly operate on individual pixels or a group of pixels and need not worry about other pixels or other group of pixels.In such cases if the processing elements available in the hardware are enough to operate on all the pixels simultaneously then a huge performance can be observed.Hardware with good speeds in sequential operations is not suitable for the above described case.This limitation can be overcome by modifying algorithm according to the hardware or Adding additional hardware inadditional to the master hardware.In this work using additional hardware for master hardware is focused more.The additional hardware capabilities should be complement to the master hardware then only the incapable operations by the master hardware can be implemented by the extra hardware.
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{}
+	\vspace*{-5cm}
+							\begin{center}
+								\textbf{Abstract}
+							\end{center}
+
+A long standing challenge in the areas of computer vision, image processing and autonomous drive systems is to achieve high accuracy with real time performance. It is very critical for applications deployed on autonomous vehicles to deliver results in real time, for not only meeting the functional requirements, but also critical timing requirements. Any lapse in the performance of application can have catastrophic results. Hence, there is an immense need to perform the given task reliably at real time. Military and defense application areas also have critical needs for high performance applications. One of the most prominent situations in these contexts, is to process video data received at ground station from Unmanned Aerial Vehicle (UAV). The ground station will have scope of hosting high performance hardware that can be used to exploit the received data for making immediate intelligent decisions. Hence, it is required to study the strategies for implementing the computationally intensive algorithms on hardware to meet both functional and timing requirements. \paragraph*{}This thesis focuses on high performance implementations of key computer vision and image processing algorithms such as adaptive contrast enhancement and motion de-blur. These algorithms are chosen because they had wide uses in both the areas of autonomous vehicles and UAV based applications. The chosen algorithms are implemented on a High performance hardware server used in ground stations that exploit UAV data. The high performance hardware here consists of multiple processing elements like Single Board Computer (SBC), GPU, DSP \& FPGA. This work exploits SBC and GPU for implementing these applications using concepts of data parallelism and memory optimizations.
+\paragraph*{}In the autonomous drive area, there are more challenges to make the applications run on an Embedded hardware with limited resources both in terms of computation and memory. In this work, Fog rectification, temporal denoising and stereo disparity algorithms are implemented on Renesas based Rcar-H3 SiP and NVIDIA’s Tegra X1 SoC by exploiting pipelining, parallel processing and task based parallelism techniques. To further understand and exploit the usage of GPU, Stereo disparity application is implemented using parallel GPU streams.
+\paragraph*{}Performance analysis is carried out for each of the algorithms and also achieved speedups are reported. The speedups range from 2X to 9X depending on the kind of application and employed performance techniques.
+% \paragraph*{} In summary, in this work adaptive contrast enhancement, motion deblur and stereo disparity algorithms are implemented on GPU and relative speed ups with respect to CPU are reported. The fog rectification and temporal denoising algorithms are implemented on Rcar-H3 embedded platform using muti-core implementation and speed ups are reported with respect to uni-core implementation. The speedups range from 2X to 9X depending on the kind of application and employed performance techniques.
+ %\paragraph*{}Performance analysis is carried out for each of the algorithms and also achieved speedups are reported. The speedups range from 2X to 9X depending on the kind of application and employed performance techniques.
 	
-	\setlength{\parindent}{10ex}
-	The 
-	} 
-\end{abstract}
-\end{document}
-  

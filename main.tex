@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Name : M.Ramakrishna
+%%  Document : Thesis
+%%  Course : M.Tech 
+%%  Branch: IC tech
+%%  Institute: University of Hyderabad
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Document calss 
+\documentclass[12pt,a4paper,oneside]{report}
+
+% Packages included
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{subfig}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{notoccite}
+\usepackage[titles]{tocloft}
+
+% Format and basic style for table 
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\lstset{framextopmargin=50pt,frame=bottomline}
+
+% To expand the section depth and table of contents depth
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+% custom table format
+\newcolumntype{L}{>{\centering\arraybackslash}m{2.5cm}}
+\newcolumntype{N}{>{\centering\arraybackslash}m{2.0cm}}
+
+% Path of the figures to be included
+\graphicspath{ {/home/ram/Documents/20170521/figures/} }
+
+\begin{document}
+
+\pagenumbering{gobble} % Disable the numbering
+\include{title} % Title page
+\include{declaration} % Declarations from the institutes
+\newpage
+
+\pagenumbering{roman} % Roman numbbering
+\include{acknowledgement} % cknowledgements
+\include{abstract} % Abstract of the thesis
+
+%\setlength{\cftbeforetoctitleskip}{-3cm}
+\tableofcontents % Table of contents
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures % Add list of figures
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables % Add list of tables
+\cleardoublepage
+\include{abbr} % Abbreviations used in the work
+\pagenumbering{arabic} % Change the page numbering arabic
+
+% Chapters of the thesis
+\include{chapter_01}
+\include{chapter_21}
+\include{chapter_22}
+\include{chapter_03}
+\include{chapter_04}
+\include{chapter_05}
+
+% References used in the work
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{unsrt}
+\bibliography{referen}
+
+% Appendix
+\include{endcontent}
+\end{document}
